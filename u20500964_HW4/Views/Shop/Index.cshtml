@@ -1,0 +1,56 @@
+﻿
+@using u20500964_HW4.Models;
+@model List<u20500964_HW4.Models.Product>
+
+
+
+<h2 class="text-center">Merchandise</h2>
+<div class="row">
+    @foreach (var prod in Model)
+    {
+    <div class="col-lg-3">
+        @if (prod.GetType() == typeof(Marchendise))
+        {
+            <!-- Cast to Merch object -->
+            Marchendise mech = (Marchendise)prod;
+            <div class="panel panel-info">
+                <div class="panel-heading">@mech.ProductId</div>
+                <div class="panel-heading">@mech.Name</div>
+                <div class="panel-body">Brand : @mech.Brand</div>
+                <div class="panel-body">Size : @mech.Size</div>
+                <div class="panel-body">Price : @mech.Price</div>
+                <div class="panel-body">Description : @mech.Description</div>
+                <div class="panel-footer">
+                    <a href="@Url.Action("BuyProduct", "Shop", new {id = mech.ProductId})" class="btn btn-success">Buy</a>
+                </div>
+            </div>
+
+
+        }
+
+        @if (prod.GetType() == typeof(Food))
+        {
+            <!-- Cast to Merch object -->
+            Food mech = (Food)prod;
+            <div class="panel panel-success">
+                <div class="panel-heading">@mech.ProductId</div>
+                <div class="panel-heading">@mech.Name</div>
+                <div class="panel-body">Ingredients : @mech.Ingredients</div>
+                <div class="panel-body">Ingredients : @mech.Ingredients</div>
+                <div class="panel-body">Price : @mech.Price</div>
+                <div class="panel-body">Description : @mech.Description</div>
+                <div class="panel-footer">
+                    <a href="@Url.Action("BuyProduct", "Shop", new {id = mech.ProductId})" class="btn btn-success">Buy</a>
+                </div>
+            </div>
+
+
+        }
+    </div>
+    }
+
+</div>
+
+
+
+

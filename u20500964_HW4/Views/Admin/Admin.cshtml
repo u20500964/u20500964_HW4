@@ -1,0 +1,81 @@
+﻿<!-- Add Merchandise-->
+
+<h2>Add Merchandise </h2>
+@using (Html.BeginForm("AddMaarchendise", "Admin", FormMethod.Post))
+{
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input type="text" class="form-control" placeholder="Name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Price</label>
+            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Price" name="price">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Qauntity</label>
+            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Qauntity" name="quantity">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Brand</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Brand" name="brand">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Description</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Description" name="description">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Size</label>
+            <select class="form-control" id="exampleInputPassword1" name="size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+}
+
+
+<h2>Add food </h2>
+
+@using (Html.BeginForm("AddFood", "Admin", FormMethod.Post))
+{
+<form id="foodform">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Name</label>
+        <input type="text" class="form-control" placeholder="Name" name="name">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Price</label>
+        <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Price" name="price">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Qauntity</label>
+        <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Qauntity" name="quantity">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Brand</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Brand" name="brand">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Description</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Description" name="description">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputPassword1">Instruction</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Instruction" name="instruction">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputPassword1">Ingredients</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Ingredients" name="ingredients">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+}
+
+
